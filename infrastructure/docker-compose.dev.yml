@@ -1,0 +1,22 @@
+# Development overrides for docker-compose
+version: '3.8'
+
+services:
+  backend:
+    volumes:
+      - ./backend/src:/app/backend/src
+      - ./backend/prompts:/app/backend/prompts
+      - ./backend/__init__.py:/app/backend/__init__.py
+      - ./backend/main.py:/app/backend/main.py
+      - ./backend/api_server.py:/app/backend/api_server.py
+      - ./pyproject.toml:/app/pyproject.toml
+    environment:
+      - LOG_LEVEL=DEBUG
+    command: ["python", "-m", "uvicorn", "src.api.entrypoint:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+    
+  ui:
+    volumes:
+      - ./ui/src:/app/ui/src
+    environment:
+      - STREAMLIT_SERVER_RUNON_SAVE=true
+      - STREAMLIT_SERVER_FILE_WATCHER_TYPE=poll

@@ -1,0 +1,15 @@
+# Backend requirements for multi-agent system
+
+langchain-groq
+langchain-tavily
+langchain-core
+fastapi
+uvicorn[standard]
+langchain
+langgraph
+python-dotenv
+pydantic
+pydantic-settings
+PyYAML
+websockets
+httpx

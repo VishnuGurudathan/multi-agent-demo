@@ -1,0 +1,27 @@
+[project]
+name = "multi-agent-system"
+version = "0.1.0"
+description = "Production-ready multi-agent AI system with LangGraph orchestration and Streamlit UI"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.116.1",
+    "httpx>=0.28.1",
+    "langchain>=0.3.26",
+    "langchain-core>=0.3.68",
+    "langchain-groq>=0.3.6",
+    "langchain-tavily>=0.2.7",
+    "langgraph>=0.5.2",
+    "numpy>=2.3.1",
+    "pandas>=2.3.1",
+    "plotly>=6.2.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "python-dotenv>=1.1.1",
+    "pyyaml>=6.0.2",
+    "requests>=2.32.4",
+    "streamlit>=1.46.1",
+    "uvicorn[standard]>=0.35.0",
+    "websocket-client>=1.8.0",
+    "websockets>=15.0.1",
+]

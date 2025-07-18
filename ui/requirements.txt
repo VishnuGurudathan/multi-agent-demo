@@ -1,0 +1,8 @@
+# UI requirements for Streamlit frontend
+streamlit
+plotly
+pandas
+websocket-client
+numpy
+pydantic-settings
+requests
